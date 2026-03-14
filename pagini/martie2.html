@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/martie2.css">
+    <title>8 Martie</title>
+</head>
+<body>
+    <div class="letter-image">
+        <div class="animated-mail">
+            <div class="back-fold"></div>
+            <div class="letter">
+                <div class="letter-border"></div>
+                <div class="letter-title"></div>
+                <div class="letter-context"></div>
+                <div class="letter-stamp">
+                    <div class="letter-stamp-inner"></div>
+                </div>
+    
+                <!-- Mesajul care va apărea -->
+                <div class="letter-message" id="letterMessage">
+                   Te iubesc prințeso
+                </div>
+            </div>
+            <div class="top-fold"></div>
+            <div class="body"></div>
+            <div class="left-fold"></div>
+        </div>
+        <div class="shadow"></div>
+        <button id="nextPage" onclick="location.href='martie3.html'">Următoarea Pagină</button>
+            
+          
+    </div>
+    
+    <script>
+        const letter = document.querySelector('.letter-image');
+        const message = document.getElementById('letterMessage');
+    
+        // Mesajul e ascuns la început
+        message.style.opacity = 0;
+        message.style.transition = 'opacity 0.8s ease';
+    
+        // Când mouse-ul trece peste scrisoare, apare mesajul
+        letter.addEventListener('mouseenter', () => {
+            message.style.opacity = 1;
+        });
+    
+        // Opțional: ascunde mesajul când mouse-ul pleacă
+        letter.addEventListener('mouseleave', () => {
+            message.style.opacity = 0;
+        });
+    </script>
+    
+</body>
+</html>
